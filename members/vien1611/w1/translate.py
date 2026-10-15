@@ -20,7 +20,6 @@ def fibonacci_iterative(n):
         a, b = b, a + b
     return a
 
-# Bắt buộc gom phần chạy trực tiếp vào khối này để pytest không bị lỗi khi import
 if __name__ == "__main__":
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 35
 
