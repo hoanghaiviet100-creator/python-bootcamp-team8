@@ -1,3 +1,4 @@
+# Sieve of Eratosthenes marks composite numbers to find primes efficiently.
 def primes_up_to(n: int) -> list[int]:
     """
     Return all prime numbers from 2 to n (inclusive).
