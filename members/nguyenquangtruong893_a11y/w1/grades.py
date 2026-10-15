@@ -9,6 +9,7 @@ def summary(scores: list[float]) -> dict:
         median = sorted_scores[n // 2]
     else:
         median = (sorted_scores[n // 2 - 1] + sorted_scores[n // 2]) / 2
+   
         
     result = {
         "min": min(scores),
