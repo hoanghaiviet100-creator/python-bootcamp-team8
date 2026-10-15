@@ -8,4 +8,4 @@
 | username_thanhvien4 | w1 | #... | #... | Thành viên  | 18/18 | 4.0 |
 | username_thanhvien5 | w1 | #... | #... | Thành viên  | 18/18 | 3.5 |
 | username_thanhvien6 | w1 | #... | #... | Thành viên  | 18/18 | 4.0 |
-| username_thanhvien7 | w1 | #... | #... | Thành viên  | 18/18 | 4.0 |
+| vien1611            | w1 | #9| #10 | Thành viên  | 18/18 | 4.5 |
