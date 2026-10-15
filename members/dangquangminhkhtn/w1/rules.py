@@ -7,7 +7,7 @@ def missing(credits:int,gpa:float)->list[str]:
         return []
     result=[]
     if credits<120:
-        result.append(f"need {120-credits} more credit(s)")
+        result.append(f"need {120-credits} more credits")
     if gpa<2.0:
         result.append(f"need {2.0-gpa:.2f} more gpa")
     return result
