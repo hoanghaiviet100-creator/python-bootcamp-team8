@@ -7,6 +7,7 @@ def word_count(text:str)->dict[str,int]:
 
     return dict(Counter(words))
 
+
 def top_k(text: str,k: int) -> list[tuple[str,int]]:
     counts=word_count(text)
     sorted_words=sorted(counts.items(),key=lambda x: (-x[1],x[0]))
