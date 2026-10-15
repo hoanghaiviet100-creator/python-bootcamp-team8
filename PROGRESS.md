@@ -3,7 +3,7 @@
 | Member | Week | Issue | PR | Reviewer | Tests | Hours |
 | :--- | :---: | :---: | :---: | :--- | :---: | :---: |
 | hoanghaiviet100-creator | w1 | #4 | #5 | Pgkhiem31 | 5/5 | 4.0 |
-| Pgkhiem31 | w1 | #6 | #... | dangquangminhkhtn  | 5/5 | 4.0 |
+| Pgkhiem31 | w1 | #6 | #7 | dangquangminhkhtn  | 5/5 | 4.0 |
 | username_thanhvien3 | w1 | #... | #... | Thành viên  | 18/18 | 4.5 |
 | username_thanhvien4 | w1 | #... | #... | Thành viên  | 18/18 | 4.0 |
 | username_thanhvien5 | w1 | #... | #... | Thành viên  | 18/18 | 3.5 |
