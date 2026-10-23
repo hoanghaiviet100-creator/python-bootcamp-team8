@@ -1,3 +1,4 @@
+#timetable.py
 def by_day(timetable: list[tuple[str, str]]) -> dict[str, list[str]]:
     result = {}
 
