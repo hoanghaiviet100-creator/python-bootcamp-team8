@@ -1,3 +1,4 @@
+#rules.py
 def can_register_thesis(credits: int, gpa: float) -> bool:
     return credits >= 120 and gpa >= 2.0
 
