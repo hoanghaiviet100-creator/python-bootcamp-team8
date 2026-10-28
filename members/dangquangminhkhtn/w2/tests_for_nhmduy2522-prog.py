@@ -1,10 +1,9 @@
 import pytest
-
 from members.nhmduy2522_prog.w1.grades import summary
-from members.nhmduy2522_prog.w1.rules import word_count as rules_word_count
 from members.nhmduy2522_prog.w1.rules import top_k as rules_top_k
-from members.nhmduy2522_prog.w1.text_tools import word_count as tools_word_count
+from members.nhmduy2522_prog.w1.rules import word_count as rules_word_count
 from members.nhmduy2522_prog.w1.text_tools import top_k as tools_top_k
+from members.nhmduy2522_prog.w1.text_tools import word_count as tools_word_count
 from members.nhmduy2522_prog.w1.timetable import by_day
 from members.nhmduy2522_prog.w1.translate import bubble_sort
 

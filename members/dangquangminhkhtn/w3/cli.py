@@ -2,9 +2,10 @@ import argparse
 import sys
 from datetime import date
 
-from ..w2.io_utils import load_tasks
-from shared.study_planner.prioritise import prioritise
 from shared.study_planner.allocate import allocate
+from shared.study_planner.prioritise import prioritise
+
+from ..w2.io_utils import load_tasks
 
 
 def main():
