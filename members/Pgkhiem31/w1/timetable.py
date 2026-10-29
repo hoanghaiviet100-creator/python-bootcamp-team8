@@ -1,6 +1,9 @@
-#timetable.py
+"""Group course names by their scheduled day."""
+
+
 def by_day(timetable: list[tuple[str, str]]) -> dict[str, list[str]]:
-    result = {}
+    """Group (course, day) pairs by day and sort each course list."""
+    result: dict[str, list[str]] = {}
 
     for course, day in timetable:
         if day not in result:

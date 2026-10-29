@@ -1,3 +1,5 @@
+"""Load task CSV files and export task data as JSON."""
+
 import csv
 import json
 from datetime import date
@@ -5,8 +7,13 @@ from datetime import date
 from .models import Task
 
 
-def load_tasks(path) -> list[Task]:
-    tasks = []
+def load_tasks(path: str | Path) -> list[Task]:
+    """Read task CSV data, raising ValueError with the invalid line number.
+
+    Require the header title,importance,effort_h,deadline in that order.
+    File access errors propagate to the caller.
+    """
+    tasks: list[Task] = []
 
     with open(path, "r", encoding="utf-8", newline="") as file:
         reader = csv.DictReader(file)
@@ -31,14 +38,13 @@ def load_tasks(path) -> list[Task]:
                 )
                 tasks.append(task)
             except (ValueError, TypeError, KeyError) as exc:
-                raise ValueError(
-                    f"Invalid row at line {line_number}: {exc}"
-                ) from exc
+                raise ValueError(f"Invalid row at line {line_number}: {exc}") from exc
 
     return tasks
 
 
-def save_json(tasks: list[Task], path) -> None:
+def save_json(tasks: list[Task], path: str | Path) -> None:
+    """Write tasks as UTF-8 JSON with ISO-formatted deadline strings."""
     data = [
         {
             "title": task.title,
