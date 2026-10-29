@@ -1,4 +1,6 @@
-from .models import Task  # Hoặc "from models import Task" tùy cách tổ chức import của dự án
+from .models import (
+    Task,  # Hoặc "from models import Task" tùy cách tổ chức import của dự án
+)
 
 
 class InfeasiblePlan(Exception):
