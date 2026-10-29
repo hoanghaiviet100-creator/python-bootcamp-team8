@@ -1,16 +1,17 @@
+
 from ..contract import Block, Task
 
 
 def allocate(tasks: list[Task], hours: float) -> list[Block]:
-
+    """Greedily allocate available hours to tasks in the given order."""
     if hours < 0:
         raise ValueError("Available hours cannot be negative.")
 
     blocks = []
-    remaining_hours = float(hours)
+    remaining_hours = hours
 
     for task in tasks:
-        if remaining_hours <= 1e-9:
+        if remaining_hours <= 0:
             break
 
         if task.effort_h <= 0:
