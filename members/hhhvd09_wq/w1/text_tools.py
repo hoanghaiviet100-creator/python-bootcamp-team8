@@ -1,4 +1,5 @@
 def word_count(text: str) -> dict[str, int]:
+    """Count words case-insensitively without basic punctuation."""
     punctuation = ".,!?;:"
     text = text.lower()
 
@@ -15,6 +16,7 @@ def word_count(text: str) -> dict[str, int]:
 
 
 def top_k(text: str, k: int) -> list[tuple[str, int]]:
+    """Return common words sorted by count and alphabetical tie break."""
     counts = word_count(text)
 
     sorted_words = sorted(
