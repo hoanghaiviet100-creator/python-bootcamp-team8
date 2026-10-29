@@ -2,10 +2,10 @@
 
 import argparse
 import csv
+import sys
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
-import sys
 from typing import TextIO
 
 
@@ -106,18 +106,16 @@ def run_cli(args: argparse.Namespace, out: TextIO = sys.stdout) -> int:
 
     try:
         tasks = load_tasks(args.csv_path)
-    except Exception as err:
+    except (ValueError, OSError, KeyError) as err:
         sys.stderr.write(f"Error reading CSV: {err}\n")
         return 1
 
     plan = schedule_tasks(tasks, args.hours, today_date)
 
     out.write(f"Tonight ({args.hours:.1f} h):\n")
-    for idx, (task, hours) in enumerate(plan, start=1):
-        out.write(f"{idx}. {task.title:<15} {hours:.1f} h\n")
+    out.writelines(f"{idx}. {task.title:<15} {hours:.1f} h\n" for idx, (task, hours) in enumerate(plan, start=1))
 
     return 0
-
 
 def main() -> None:
     """Entry point for CLI module."""

@@ -1,7 +1,7 @@
 """W3-2: Chat log analytics - request counts, p95 latency, and slowest route."""
 
-from collections import Counter, defaultdict
 import math
+from collections import Counter, defaultdict
 from typing import Any
 
 
@@ -43,8 +43,7 @@ def analyse(pairs: list[tuple[str, float]]) -> dict[str, Any]:
         route_latencies[route].append(float(latency))
 
     p95_dict: dict[str, float] = {
-        route: _calc_p95(latencies)
-        for route, latencies in route_latencies.items()
+        route: _calc_p95(latencies) for route, latencies in route_latencies.items()
     }
 
     # Identify the route with maximum p95 latency
