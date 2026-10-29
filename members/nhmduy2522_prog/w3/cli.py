@@ -26,7 +26,7 @@ def main() -> None:
         sys.exit(1)
 
     try:
-        today_date = date.fromisoformat(args.today)
+        date.fromisoformat(args.today)
     except ValueError:
         sys.stderr.write(
             f"Error: Invalid date format for --today: '{args.today}'. Expected YYYY-MM-DD.\n"
@@ -34,5 +34,5 @@ def main() -> None:
         sys.exit(1)
 
     print(f"Tonight ({args.hours:.1f} h):")
-    print(f"1. Assignment ...... 1.5 h")
-    print(f"2. DS exam ......... 0.5 h")
+    print("1. Assignment ...... 1.5 h")
+    print("2. DS exam ......... 0.5 h")
