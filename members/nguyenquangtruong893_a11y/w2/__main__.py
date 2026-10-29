@@ -6,10 +6,10 @@ from .io_utils import load_tasks
 
 
 def main() -> None:
-  
+
     repo_root = Path(__file__).resolve().parents[3]
     sample_csv = repo_root / "samples" / "tasks.csv"
-    
+
     if not sample_csv.exists():
         sample_csv = Path("samples/tasks.csv")
     if not sample_csv.exists():
