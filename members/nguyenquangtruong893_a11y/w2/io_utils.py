@@ -11,7 +11,7 @@ from .models import Task
 
 def load_tasks(path: str | Path) -> list[Task]:
     """Load tasks from a CSV file.
-
+    
     Expected CSV columns: title, importance, effort_h, deadline.
     Raises ValueError with the 1-based line number if any row is invalid.
     """
@@ -28,10 +28,8 @@ def load_tasks(path: str | Path) -> list[Task]:
                 # Bỏ qua các dòng trống hoàn toàn nếu có
                 continue
             if len(row) != 4:
-                raise ValueError(
-                    f"Invalid format at line {line_num}: expected 4 columns"
-                )
-
+                raise ValueError(f"Invalid format at line {line_num}: expected 4 columns")
+            
             title, imp_str, effort_str, deadline_str = (item.strip() for item in row)
             try:
                 importance = int(imp_str)

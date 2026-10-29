@@ -13,7 +13,7 @@ class Task:
 
     def __post_init__(self) -> None:
         """Validate task fields.
-
+        
         Importance must be between 1 and 5 inclusive.
         """
         if not (1 <= self.importance <= 5):
@@ -21,7 +21,7 @@ class Task:
 
     def days_left(self, today: date) -> int:
         """Calculate days remaining until deadline.
-
+        
         Returns 0 if deadline has already passed (never below 0).
         """
         delta = (self.deadline - today).days
