@@ -1,5 +1,5 @@
 
-from ..contract import Task, Block
+from ..contract import Block, Task
 
 
 def allocate(tasks: list[Task], hours: float) -> list[Block]:

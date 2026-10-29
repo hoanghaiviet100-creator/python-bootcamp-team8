@@ -1,6 +1,6 @@
 """Custom exceptions and validation for study plan feasibility."""
 
-from typing import Iterable
+from collections.abc import Iterable
 
 from .models import Task
 

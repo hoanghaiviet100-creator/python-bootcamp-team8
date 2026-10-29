@@ -5,6 +5,7 @@ from datetime import date
 from pathlib import Path
 
 import pytest
+
 from shared.contract import Block, Task
 from shared.study_planner.export import (
     export_json,
