@@ -1,10 +1,9 @@
-import pytest
 
 from members.vien1611.w1.grades import summary
 from members.vien1611.w1.rules import can_register_thesis, missing
-from members.vien1611.w1.translate import fibonacci_iterative, fibonacci_recursive
-from members.vien1611.w1.text_tools import word_count, top_k
+from members.vien1611.w1.text_tools import top_k, word_count
 from members.vien1611.w1.timetable import by_day
+from members.vien1611.w1.translate import fibonacci_iterative, fibonacci_recursive
 
 
 # Test 1: Module grades.py
