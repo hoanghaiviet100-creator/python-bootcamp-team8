@@ -1,5 +1,4 @@
 from pathlib import Path
-
 from members.nhmduy2522_prog.w2.io_utils import load_tasks
 
 CSV_PATH = Path(__file__).parent / "tasks.csv"
