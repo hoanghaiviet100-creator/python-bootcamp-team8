@@ -4,14 +4,14 @@ import csv
 import json
 from datetime import date
 from pathlib import Path
-from typing import Any, Union
+from typing import Any
 
 from .models import Task
 
 
-def load_tasks(path: Union[str, Path]) -> list[Task]:
+def load_tasks(path: str | Path) -> list[Task]:
     """Load tasks from a CSV file.
-    
+
     Expected CSV columns: title, importance, effort_h, deadline.
     Raises ValueError with the 1-based line number if any row is invalid.
     """
@@ -28,8 +28,10 @@ def load_tasks(path: Union[str, Path]) -> list[Task]:
                 # Bỏ qua các dòng trống hoàn toàn nếu có
                 continue
             if len(row) != 4:
-                raise ValueError(f"Invalid format at line {line_num}: expected 4 columns")
-            
+                raise ValueError(
+                    f"Invalid format at line {line_num}: expected 4 columns"
+                )
+
             title, imp_str, effort_str, deadline_str = (item.strip() for item in row)
             try:
                 importance = int(imp_str)
@@ -44,7 +46,7 @@ def load_tasks(path: Union[str, Path]) -> list[Task]:
     return tasks
 
 
-def save_json(tasks: list[Task], path: Union[str, Path]) -> None:
+def save_json(tasks: list[Task], path: str | Path) -> None:
     """Save a list of Task objects to a JSON file."""
     file_path = Path(path)
     data: list[dict[str, Any]] = [

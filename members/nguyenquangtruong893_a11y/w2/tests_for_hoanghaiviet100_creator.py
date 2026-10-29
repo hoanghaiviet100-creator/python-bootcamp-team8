@@ -1,13 +1,12 @@
 """Cross-tests for hoanghaiviet100_creator's W1 modules (W2-4)."""
 
 import pytest
+
 from members.hoanghaiviet100_creator.w1.grades import summary
 from members.hoanghaiviet100_creator.w1.rules import can_register_thesis, missing
 from members.hoanghaiviet100_creator.w1.text_tools import top_k, word_count
 from members.hoanghaiviet100_creator.w1.timetable import by_day
 from members.hoanghaiviet100_creator.w1.translate import binary_search
-
-
 
 
 def test_grades_summary_normal_and_even_odd():
@@ -19,7 +18,6 @@ def test_grades_summary_normal_and_even_odd():
         "mean": 7.5,
         "median": 7.5,
     }
-
 
     assert summary([6.0, 7.5, 8.0, 9.0]) == {
         "min": 6.0,
@@ -43,21 +41,16 @@ def test_grades_summary_edge_case_single_and_empty():
         summary([])
 
 
-
-
 def test_rules_thesis_eligibility():
     """Kiểm tra điều kiện biên xét tốt nghiệp và các lý do thiếu."""
 
     assert can_register_thesis(120, 2.0) is True
     assert missing(120, 2.0) == []
 
-
     assert can_register_thesis(110, 1.8) is False
     reasons = missing(110, 1.8)
     assert any("credit" in r.lower() for r in reasons)
     assert any("gpa" in r.lower() for r in reasons)
-
-
 
 
 def test_text_tools_word_count_and_top_k():
@@ -67,7 +60,6 @@ def test_text_tools_word_count_and_top_k():
     assert counts["git"] == 2
     assert counts["is"] == 2
 
-
     assert top_k(text, 2) == [("git", 2), ("is", 2)]
 
 
@@ -76,7 +68,6 @@ def test_text_tools_only_punctuation_edge_case():
     raw_text = "... ,,, !!! ??? ;: ---"
     assert word_count(raw_text) == {}
     assert top_k(raw_text, 3) == []
-
 
 
 def test_timetable_by_day_and_empty():
@@ -94,8 +85,6 @@ def test_timetable_by_day_and_empty():
     assert by_day([]) == {}
 
 
-
-
 def test_binary_search_positions():
     """Kiểm tra tìm kiếm phần tử tại các vị trí đầu, giữa, cuối và không tồn tại."""
     nums = [10, 20, 30, 40, 50]
@@ -110,7 +99,6 @@ def test_binary_search_edge_cases():
 
     assert binary_search([], 10) == -1
 
-   
     assert binary_search([5], 5) == 0
     assert binary_search([5], 1) == -1
 
