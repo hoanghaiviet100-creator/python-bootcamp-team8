@@ -1,7 +1,7 @@
 """T-W3 Member 2: test the team CLI with real CSV files and subprocesses.
 
 Run from the repository root:
-    python -m pytest -v shared/study_planner/test_study_planner_e2e.py
+    python -m pytest -v tests/test_study_planner_e2e.py
 
 These tests require Member 1's shared/study_planner/__main__.py and the
 team's parse_csv, prioritise, allocate, and render implementations. Missing
@@ -15,7 +15,7 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def run_planner(csv_path: Path, hours: float) -> subprocess.CompletedProcess[str]:
