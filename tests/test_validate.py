@@ -1,7 +1,9 @@
 from datetime import date
+
 import pytest
-from shared.contract import Task
 from shared.study_planer.validate import validate_tasks
+
+from shared.contract import Task
 
 
 # 1. Trường hợp danh sách hợp lệ

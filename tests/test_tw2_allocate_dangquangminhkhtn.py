@@ -3,9 +3,8 @@ from datetime import date
 
 import pytest
 
-from shared.contract import Task, Block
+from shared.contract import Task
 from shared.study_planner.allocate import allocate
-
 
 TODAY = date(2026, 10, 22)
 
