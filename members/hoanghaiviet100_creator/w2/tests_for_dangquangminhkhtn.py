@@ -1,14 +1,11 @@
 
 import pytest
 
-import pytest
-
 from members.dangquangminhkhtn.w1.grades import summary
 from members.dangquangminhkhtn.w1.rules import can_register_thesis, missing
-from members.dangquangminhkhtn.w1.text_tools import word_count, top_k
+from members.dangquangminhkhtn.w1.text_tools import top_k, word_count
 from members.dangquangminhkhtn.w1.timetable import by_day
 from members.dangquangminhkhtn.w1.translate import transpose
-
 
 # ===== grades.py =====
 

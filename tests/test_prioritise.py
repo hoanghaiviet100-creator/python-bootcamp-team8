@@ -4,7 +4,6 @@ from datetime import date, timedelta
 from shared.contract import Task
 from shared.study_planner.prioritise import prioritise
 
-
 TODAY = date(2026, 10, 22)
 
 

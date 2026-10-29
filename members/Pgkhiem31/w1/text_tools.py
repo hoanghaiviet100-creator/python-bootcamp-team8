@@ -1,6 +1,4 @@
-"""Count normalised words and select the most frequent entries."""
-
-
+#text_tools.py
 def word_count(text: str) -> dict[str, int]:
     """Count lowercase whitespace-separated words after removing .,!?;:."""
     ignore = str.maketrans("", "", ".,!?;:")

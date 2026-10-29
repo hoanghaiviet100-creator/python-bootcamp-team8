@@ -1,8 +1,9 @@
 """Module for computing statistics, priority breakdown, and deadline status."""
 
 from collections import Counter
+from collections.abc import Iterable
 from datetime import date
-from typing import Any, Iterable
+from typing import Any
 
 from shared.contract import Task
 

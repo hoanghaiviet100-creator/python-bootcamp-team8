@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Sequence
 from datetime import date
 from pathlib import Path
-from typing import Any, Sequence, Union
+from typing import Any, Union
 
 from shared.contract import Block, Task
 
@@ -28,9 +29,7 @@ def _item_to_dict(item: PlanItem) -> dict[str, Any]:
         allocated_hours = float(getattr(item, "effort_h", getattr(item, "hours", 0.0)))
 
     deadline_val = getattr(task, "deadline", None)
-    if isinstance(deadline_val, date):
-        deadline_str = deadline_val.isoformat()
-    elif hasattr(deadline_val, "isoformat"):
+    if isinstance(deadline_val, date) or hasattr(deadline_val, "isoformat"):
         deadline_str = deadline_val.isoformat()
     else:
         deadline_str = str(deadline_val)
