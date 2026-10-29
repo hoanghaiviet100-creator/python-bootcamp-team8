@@ -1,5 +1,6 @@
-import time
 import sys
+import time
+
 
 def fibonacci_recursive(n):
     """

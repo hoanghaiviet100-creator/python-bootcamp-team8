@@ -1,6 +1,8 @@
 import csv
 from datetime import datetime
-from shared.contract import Task  
+
+from shared.contract import Task
+
 
 def parse_csv(path: str) -> list[Task]:
     """Đọc file CSV chứa danh sách task và chuyển thành danh sách các đối tượng Task chuẩn."""

@@ -1,14 +1,13 @@
 import argparse
+import sys
 from datetime import date
 from pathlib import Path
-import sys
 
+from members.hoanghaiviet100_creator.w2.errors import InfeasiblePlan
 from shared.study_planner.allocate import allocate
 from shared.study_planner.parses import parse_csv
 from shared.study_planner.prioritise import prioritise
 from shared.study_planner.render import render
-from members.hoanghaiviet100_creator.w2.errors import InfeasiblePlan
-
 
 
 def main() -> None:

@@ -1,5 +1,7 @@
 from pathlib import Path
+
 from .io_utils import load_tasks
+
 
 def main():
     repo_root = Path(__file__).resolve().parents[3]

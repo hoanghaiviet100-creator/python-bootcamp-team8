@@ -1,10 +1,10 @@
 import pytest
 
 from members.hhhvd09_wq.w1.grades import summary
-from members.hhhvd09_wq.w1.rules import can_register_thesis, missing
-from members.hhhvd09_wq.w1.translate import primes_up_to
+from members.hhhvd09_wq.w1.rules import can_register_thesis
+from members.hhhvd09_wq.w1.text_tools import top_k, word_count
 from members.hhhvd09_wq.w1.timetable import by_day
-from members.hhhvd09_wq.w1.text_tools import word_count, top_k
+from members.hhhvd09_wq.w1.translate import primes_up_to
 
 
 def test_summary_empty_scores():

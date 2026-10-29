@@ -1,7 +1,7 @@
 import argparse
+import sys
 from datetime import date
 from pathlib import Path
-import sys
 
 
 def run_cli() -> None:
@@ -23,7 +23,7 @@ def run_cli() -> None:
         sys.exit(1)
 
     try:
-        today_date = date.fromisoformat(args.today)
+        date.fromisoformat(args.today)
     except ValueError:
         sys.stderr.write("Error: --today must be in YYYY-MM-DD format.\n")
         sys.exit(1)

@@ -1,5 +1,4 @@
 #text_tools.py
-import string 
 def word_count(text: str) -> dict[str, int]:
     ignore = str.maketrans("", "", ".,!?;:")
     text = text.translate(ignore).lower()

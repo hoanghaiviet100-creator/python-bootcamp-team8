@@ -1,6 +1,7 @@
 import string
 from collections import Counter
 
+
 def word_count(text: str) -> dict[str, int]:
     translator = str.maketrans('', '', string.punctuation)
     cleaned_text = text.lower().translate(translator)

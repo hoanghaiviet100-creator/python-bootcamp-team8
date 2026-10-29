@@ -4,12 +4,12 @@ import csv
 import json
 from datetime import date
 from pathlib import Path
-from typing import Any, Union
+from typing import Any
 
 from .models import Task
 
 
-def load_tasks(path: Union[str, Path]) -> list[Task]:
+def load_tasks(path: str | Path) -> list[Task]:
     """Load tasks from a CSV file.
     
     Expected CSV columns: title, importance, effort_h, deadline.
@@ -44,7 +44,7 @@ def load_tasks(path: Union[str, Path]) -> list[Task]:
     return tasks
 
 
-def save_json(tasks: list[Task], path: Union[str, Path]) -> None:
+def save_json(tasks: list[Task], path: str | Path) -> None:
     """Save a list of Task objects to a JSON file."""
     file_path = Path(path)
     data: list[dict[str, Any]] = [

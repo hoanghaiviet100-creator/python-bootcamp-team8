@@ -2,7 +2,9 @@ import csv
 import json
 from datetime import date
 from pathlib import Path
+
 from .models import Task
+
 
 def load_tasks(path: str | Path) -> list[Task]:
     tasks = []

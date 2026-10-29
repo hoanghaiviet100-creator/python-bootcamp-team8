@@ -1,6 +1,5 @@
 import sys
 from pathlib import Path
-import pytest
 
 # Ensure repository root is on sys.path
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -9,7 +8,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from members.Pgkhiem31.w1.grades import summary
 from members.Pgkhiem31.w1.rules import can_register_thesis, missing
-from members.Pgkhiem31.w1.text_tools import word_count, top_k
+from members.Pgkhiem31.w1.text_tools import top_k, word_count
 from members.Pgkhiem31.w1.timetable import by_day
 from members.Pgkhiem31.w1.translate import insertion_sort
 
